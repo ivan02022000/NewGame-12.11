@@ -1,0 +1,95 @@
+#:kivy 1.11.1
+
+<Item>:
+	size:10,10
+	canvas:
+		Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+<Img>:
+	size:10,10
+	canvas:
+		Color:
+            rgba: 1, 1, 0, 0
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+<Room>:
+    size: 100, 100
+    canvas:
+		Color:
+            rgba: 1, 0, 0, 0.2
+        Rectangle:
+            pos:0, 0
+            size:self.size
+
+<House>:
+    size: 100, 100
+
+    canvas:
+		Color:
+            rgba: 0, 0, 1, 0.2
+        Rectangle:
+            pos:0, 0
+            size:self.size
+	
+
+
+<ScrollerGame>:
+    house: house_id
+
+    House:
+        id: house_id
+        center: root.center
+
+	#left border
+	Widget:
+		size: 500, 1100
+        x: root.center_x - 500 - 500
+        center_y: root.center_y
+		canvas:
+			Color:
+				rgba: 0, 1, 0, 0.5
+			Rectangle:
+				pos:self.pos
+				size:self.size
+
+	#right border
+	Widget:
+		size: 500, 1100
+        x: root.center_x + 500
+        center_y: root.center_y
+		canvas:
+			Color:
+				rgba: 0, 1, 0, 0.5
+			Rectangle:
+				pos:self.pos
+				size:self.size
+	
+	#upper border
+	Widget:
+		size: 1000, 10
+        center_x: root.center_x
+        y: root.center_y + 500
+		canvas:
+			Color:
+				rgba: 0, 1, 0, 0.5
+			Rectangle:
+				pos:self.pos
+				size:self.size
+
+	#down border
+	Widget:
+		size: 1000, 10
+        center_x: root.center_x
+        y: root.center_y - 500 - 10
+		canvas:
+			Color:
+				rgba: 0, 1, 0, 0.5
+			Rectangle:
+				pos:self.pos
+				size:self.size
