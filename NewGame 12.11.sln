@@ -5,6 +5,18 @@ VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NewGame 12.11", "NewGame 12.11\NewGame 12.11.pyproj", "{FA1AAECC-CA06-4379-B1F7-3C5884147235}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{934BE480-6375-4BA8-B934-FFE0BCB88794}"
+	ProjectSection(SolutionItems) = preProject
+		NewGame 12.11\analyzer.py = NewGame 12.11\analyzer.py
+		NewGame 12.11\compiler.py = NewGame 12.11\compiler.py
+		NewGame 12.11\constants.py = NewGame 12.11\constants.py
+		NewGame 12.11\kivi_visual_shell.py = NewGame 12.11\kivi_visual_shell.py
+		NewGame 12.11\parser_.py = NewGame 12.11\parser_.py
+		NewGame 12.11\scaner.py = NewGame 12.11\scaner.py
+		NewGame 12.11\scroller.kv = NewGame 12.11\scroller.kv
+		NewGame 12.11\text.txt = NewGame 12.11\text.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
