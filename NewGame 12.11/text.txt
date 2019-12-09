@@ -1,204 +1,37 @@
 room cur:
+height 1500
+width 1100
 img "Bubbles.jpg"
-right r0
+up r0
+right r1
+down r2
+left r3
 end
 
 room r0:
+width 1500
+height 1100
 img "Wall.jpg"
-right r1
+right cur
 end
 
 room r1:
+height 1500
+width 1100
 img "Love.gif"
-right r2
+right cur
 end
 
 room r2:
-img "Wall.jpg"
-right r3
+width 1500
+height 1100
+img "faust_github.jpg"
+right cur
 end
 
 room r3:
-img "Love.gif"
-right r4
-end
-
-room r4:
-img "Wall.jpg"
-right r5
-end
-
-room r5:
-img "Love.gif"
-right r6
-end
-
-room r6:
-img "Wall.jpg"
-right r7
-end
-
-room r7:
-img "Love.gif"
-right r8
-end
-
-room r8:
-img "Wall.jpg"
-right r9
-end
-
-room r9:
-img "Love.gif"
-right r10
-end
-
-room r10:
-img "Wall.jpg"
-right r11
-end
-
-room r11:
-img "Love.gif"
-right r12
-end
-
-room r12:
-img "Wall.jpg"
-right r13
-end
-
-room r13:
-img "Love.gif"
-right r14
-end
-
-room r14:
-img "Wall.jpg"
-right r15
-end
-
-room r15:
-img "Love.gif"
-right r16
-end
-
-room r16:
-img "Wall.jpg"
-right r17
-end
-
-room r17:
-img "Love.gif"
-right r18
-end
-
-room r18:
-img "Wall.jpg"
-down r19
-end
-
-room r19:
-img "Love.gif"
-down cur
-end
-
-room r20:
-img "Wall.jpg"
-down r21
-end
-
-room r21:
-img "Love.gif"
-down r22
-end
-
-room r22:
-img "Wall.jpg"
-down r23
-end
-
-room r23:
-img "Love.gif"
-down r24
-end
-
-room r24:
-img "Wall.jpg"
-down r25
-end
-
-room r25:
-img "Love.gif"
-down r26
-end
-
-room r26:
-img "Wall.jpg"
-down r27
-end
-
-room r27:
-img "Love.gif"
-down r28
-end
-
-room r28:
-img "Wall.jpg"
-down r29
-end
-
-room r29:
-img "Love.gif"
-down r210
-end
-
-room r210:
-img "Wall.jpg"
-down r211
-end
-
-room r211:
-img "Love.gif"
-down r212
-end
-
-room r212:
-img "Wall.jpg"
-down r213
-end
-
-room r213:
-img "Love.gif"
-down r214
-end
-
-room r214:
-img "Wall.jpg"
-down r215
-end
-
-room r215:
-img "Love.gif"
-down r216
-end
-
-room r216:
-img "Wall.jpg"
-down r217
-end
-
-room r217:
-img "Love.gif"
-down r218
-end
-
-room r218:
-img "Wall.jpg"
-down r219
-end
-
-room r219:
-img "Love.gif"
+height 1500
+width 1100
+img "Ill1.jpg"
 right cur
 end

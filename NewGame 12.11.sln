@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NewGame 12.11\constants.py = NewGame 12.11\constants.py
 		NewGame 12.11\kivi_visual_shell.py = NewGame 12.11\kivi_visual_shell.py
 		NewGame 12.11\parser_.py = NewGame 12.11\parser_.py
-		NewGame 12.11\scaner.py = NewGame 12.11\scaner.py
+		NewGame 12.11\scanner.py = NewGame 12.11\scanner.py
 		NewGame 12.11\scroller.kv = NewGame 12.11\scroller.kv
 		NewGame 12.11\text.txt = NewGame 12.11\text.txt
 	EndProjectSection

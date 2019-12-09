@@ -1,5 +1,6 @@
 #:kivy 1.11.1
 
+# Виджет Предмет
 <Item>:
 	size:10,10
 	canvas:
@@ -9,6 +10,7 @@
             pos:self.pos
             size:self.size
 
+# Виджет Изображение
 <Img>:
 	size:10,10
 	canvas:
@@ -18,8 +20,9 @@
             pos:self.pos
             size:self.size
 
+# Виджет Комната
 <Room>:
-    size: self.width_, self.height_
+    size: self.width, self.height
     canvas:
 		Color:
             rgba: 1, 0, 0, 0.2
@@ -27,8 +30,9 @@
             pos:0, 0
             size:self.size
 
+# Виджет Дом
 <House>:
-    size: self.width_, self.height_
+    size: self.width, self.height
 
     canvas:
 		Color:
@@ -37,8 +41,7 @@
             pos:0, 0
             size:self.size
 	
-
-
+# Игра Scroller
 <ScrollerGame>:
     house: house_id
 
@@ -46,7 +49,7 @@
         id: house_id
         center: root.center
 
-	#left border
+	# Left border
 	Widget:
 		size: 500, 1100
         x: root.center_x - 500 - 500
@@ -58,7 +61,7 @@
 				pos:self.pos
 				size:self.size
 
-	#right border
+	# Right border
 	Widget:
 		size: 500, 1100
         x: root.center_x + 500
@@ -70,7 +73,7 @@
 				pos:self.pos
 				size:self.size
 	
-	#upper border
+	# Upper border
 	Widget:
 		size: 1000, 10
         center_x: root.center_x
@@ -82,7 +85,7 @@
 				pos:self.pos
 				size:self.size
 
-	#down border
+	# Below border
 	Widget:
 		size: 1000, 10
         center_x: root.center_x
