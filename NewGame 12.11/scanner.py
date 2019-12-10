@@ -28,16 +28,18 @@ KEY_WORDS = {
     "img"   : "IMG"
     }
 
-def print_file(file):
+def print_file(source):
     '''
     Печатает файл, если LOG_FILE == True
     на вход передается файл
     '''
     if lOG_FILE == True:
+        file = open(source, "r")
         line_num = 0
         for line in file:
             print(str(line_num) + ") " + line[0: len(line) - 1])
             line_num += 1
+        file.close()
             
 def print_log(line):
     '''
@@ -54,7 +56,7 @@ def print_error(name, line_num, char_num):
     '''
     global error
     error = True
-    print("Error: " + name + " (scanner) found at line: " + str(line_num) + ", char: " + str(char_num)) 
+    print("Error: " + name + " (scanner) found at line: " + str(line_num + 1) + ", char: " + str(char_num + 1)) 
 
 def tests():
     '''
@@ -147,7 +149,7 @@ def add_token(line_num, char_num, type_, value = None):
     Параметры: номер строки, номер символа, тип токена, значение токена (по умолчанию None)
     '''
     global tokens_line
-    tokens_line += [Token(line_num, char_num, type_, value)]
+    tokens_line += [Token(line_num + 1, char_num + 1, type_, value)]
     print_log("added token: " + str(tokens_line[len(tokens_line)-1]))
 
 def add_line():
@@ -184,6 +186,15 @@ def add_num(line_num, char_num, line, word_len):
     add_token(line_num,  char_num - word_len + 1,
               "NUMBER", num)
 
+def fresh():
+    global tokens
+    tokens = []
+    global error
+    error = []
+    global tokens_line
+    tokens_line = []
+
+
 def find_tokens(source = "text.txt"):
     '''
     Ищет токены в тексте
@@ -196,8 +207,11 @@ def find_tokens(source = "text.txt"):
     except FileNotFoundError:
         print("File not found!")
     else:
+        global tokens
+        fresh()
+        file.close()
         print ("source: " + source)
-        print_file(file)
+        print_file(source)
         file = open(source, "r")
         line_num = 0
         for line in file:
@@ -214,7 +228,7 @@ def find_tokens(source = "text.txt"):
                     if string_len == -1:
                         string_len = 0
                     elif char == '"':
-                        add_token(line_num, char_num, "STRING", line[char_num - string_len: char_num])
+                        add_token(line_num, char_num - string_len - 1, "STRING", line[char_num - string_len: char_num])
                         string_len = -1
                     else:
                         if char_num == len(line) - 1:

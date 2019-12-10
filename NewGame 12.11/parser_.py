@@ -104,7 +104,7 @@ def matches(tokens, match):
                 break
     if len(match) > len(tokens):
         print_error("not found " + match[len(tokens)] + " at the end of line",
-                    tokens[0].line_num, 0)
+                    tokens[0].line_num, 1)
     return True
 
 def room_closed():
@@ -126,7 +126,7 @@ def add_room(name_token):
     global cur_room_name
     global tree
     if not room_closed():
-        print_error("room not closed with END", name_token.line_num, 0)
+        print_error("room not closed with END", name_token.line_num, 1)
     elif name_token.value in tree:
         print_error("reuse room name", name_token.line_num, name_token.char_num)
     else:
@@ -356,12 +356,21 @@ def match_img(tokens):
     else:
         return False
 
+def fresh():
+    global error
+    error = False
+    global tree
+    tree = {}
+    global cur_room_name
+    cur_room_name = ""
+
 def build_tree(tokens):
     '''
     Строит из входящих токенов дерево
     В случае успешного создния дерева возвращает tree
     В случае ошибки возвращает None
     '''
+    fresh()
     print("building tree:")
     for line in tokens:
         if error:
@@ -387,7 +396,7 @@ def build_tree(tokens):
         else:
             print_error("syntax error", line[0].line_num, line[0].char_num)
     if (not room_closed()) and (not error):
-        print_error("room not closed with END", tokens[len(tokens) - 1][0].line_num, 0)
+        print_error("room not closed with END", tokens[len(tokens) - 1][0].line_num, 1)
         return None
     elif error:
         return None

@@ -40,6 +40,10 @@ def check_names_error(cur_name, doors):
         else:
             names += [door.value]
 
+def fresh():
+    global error 
+    error = False
+
 def analyse_all_errors(tree):
     '''
     Анализирует на наличие логических ошибок
